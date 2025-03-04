@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='bg-black text-white px-20 pb-8 pt-12'>
-            <div className='grid grid-cols-2 mb-8 '>
-            <div className='grid grid-cols-2 '>
+        <div className='bg-black text-white lg:px-20 md:px-20 px-4  pb-8 pt-12 mt-6'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 mb-8'>
+            <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:mb-0 mb-10'>
                 <div>
                      <button className='font-bold text-4xl '>Tourism<span className='text-blue-500'>Goal</span></button>
                      <div className='flex justify-start my-4'>
@@ -27,7 +27,7 @@ const Footer = () => {
                      </div>
                 </div>
                 <div>
-                    <p className='font-bold text-lg mb-4'>Links</p>
+                    <p className='font-bold text-lg mb-4 lg:mt-0 md:mt-0 mt-4'>Links</p>
                     <div className='opacity-75'>
                     <Link><p>Home</p></Link>
                     <Link><p className='my-2'>Top News</p></Link>
@@ -42,18 +42,18 @@ const Footer = () => {
                 <div>
                     <h2 className='font-semibold text-lg mb-4'>About Us</h2>
                     <div className='opacity-75'>
-                    <Link><p>Who we are</p></Link>
+                    <Link to={'/whoWeAre'}><p>Who we are</p></Link>
                     <Link><p className='my-2'>What we do</p></Link>
-                    <Link><p>Our story</p></Link>
+                    <Link to={'/outStory'}><p>Our story</p></Link>
                     </div>
                     <div className='col-span-3 mt-10'>
                         <h2 className='font-bold text-lg mb-3'>The Daily Newsletter</h2>
                         <div className='grid grid-cols-3'>
                             <div className='col-span-2'>
-                             <input type="text" placeholder="Enter Your Email" className="input input-bordered w-[200%]" />
+                             <input type="text" placeholder="Enter Your Email" className="input input-bordered lg:w-[200%] md:w-[220%] w-[220%]" />
                             </div>
                             <div className='ml-2'>
-                             <button className="btn btn-primary font-semibold text-lg py-4 px-6 ml-40">Subscribe</button>
+                             <button className="btn btn-primary font-semibold text-lg py-4 px-6 lg:ml-40 md:ml-40 ml-20">Subscribe</button>
                             </div>
                         </div>
                     </div>
@@ -61,24 +61,24 @@ const Footer = () => {
                 <div>
                     <h2 className='font-semibold text-lg mb-4'>Insights</h2>
                     <div className='opacity-75'>
-                    <Link><p>Photo Gallery</p></Link>
+                    <Link to={'photoGallery'}><p>Photo Gallery</p></Link>
                     <Link><p className='my-2'>Articles</p></Link>
                     </div>
                 </div>
                 <div>
                     <h2 className='font-semibold text-lg mb-4'>Others</h2>
                     <div className='opacity-75'>
-                    <Link><p>Privacy & Policy</p></Link>
+                    <Link to={'/privacyPolicy'}><p>Privacy & Policy</p></Link>
                     <Link><p className='my-2'>Faqs</p></Link>
-                    <Link><p>Jobs</p></Link>
+                    <Link to={'/jobs'}><p>Jobs</p></Link>
                     </div>
                 </div>
                 
             </div>
             </div>
             <hr />
-            <div className='mt-8'>
-                <p className='text-center text-lg'>© copyright Technosoft. All Rights Reserved</p>
+            <div className='lg:mt-8 md:mt-8 mt-4'>
+                <p className='text-center lg:text-lg md:text-lg text-md'>© copyright Technosoft. All Rights Reserved</p>
             </div>
         </div>
     );

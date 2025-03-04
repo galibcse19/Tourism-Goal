@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const links =<>
-    <li><a>Home</a></li>
-    <li><a>Top News</a></li>
-    <li><a>Destination to go</a></li>
-    <li><a>Goals to do</a></li>
-    <li><a>Books & Notes</a></li>
-    <li><a>Tourism Association</a></li>
+    <Link to={'/'}><li><a>Home</a></li></Link>
+    <Link to={'/topNews'}><li><a>Top News</a></li></Link>
+    <Link to={'/destinationToGo'}><li><a>Destination to go</a></li></Link>
+    <Link to={'/goalsToDo'}><li><a>Goals to do</a></li></Link>
+    <Link to={'/booksNotes'}><li><a>Books & Notes</a></li></Link>
+    <Link to={'/'}><li><a>Tourism Association</a></li></Link>
     </>
     return (
         <div className='py-6'>
-           <div className='flex justify-between'>
-                <div className='flex justify-start'>
+           <div className='lg:flex md:flex justify-between lg:px-0 px-2 '>
+                <div className='flex justify-start lg:mb-0 md:mb-0 mb-4'>
                     <div className="relative">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -28,17 +29,18 @@ const Navbar = () => {
                         </svg>
                         <input
                             type="text"
-                            className="w-full pl-10 pr-3 py-2 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="lg:w-[200%] md:w-[300%] w-full pl-10 pr-3 py-2 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Search here..."
                         />
                     </div>
 
-                    <div className='ml-2'>
+                    <div className='ml-2 lg:ml-36 md:ml-28'>
                      <button className="btn btn-primary font-bold text-md">Search</button>
                     </div>
                 </div>
                 <div className='flex justify-end'>
-                    <img className='rounded-md w-1/3' src={"https://i.ibb.co.com/dJmC8v9t/banner-ads-1.jpg"} alt="" />
+                    {/* <img className='rounded-md lg:w-1/3 md:w-1/2' src={"https://i.ibb.co.com/dJmC8v9t/banner-ads-1.jpg"} alt="" /> */}
+                    <img className='rounded-md lg:w-1/3 md:w-1/2' src={"https://i.ibb.co.com/dJmC8v9t/banner-ads-1.jpg"} alt="" />
                 </div>
            </div>
            <div>
@@ -61,11 +63,11 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1]  w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-blue-500 font-semibold text-xl rounded-box z-[1]  w-52 p-2 shadow">
                         {links}
                     </ul>
                     </div>
-                    <button className='font-bold text-4xl'>Tourism<span className='text-blue-500'>Goal</span></button>
+                    <button className='font-bold lg:text-4xl md:text-3xl text-xl'>Tourism<span className='text-blue-500'>Goal</span></button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 mt-2 font-semibold text-end text-lg">
@@ -73,7 +75,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                     <button className="btn btn-primary font-semibold text-lg py-4 px-6">Career/Jobs</button>
+                     <Link to={'/jobs'}><button className="btn btn-primary font-semibold lg:text-lg md:text-lg text-sm lg:py-4 lg:px-6 md:py-4 md:px-6 py-2 px-3">Career/Jobs</button></Link>
                 </div>
                 </div>
            </div>
