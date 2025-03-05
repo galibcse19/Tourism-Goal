@@ -29,12 +29,12 @@ const Navbar = () => {
                         </svg>
                         <input
                             type="text"
-                            className="lg:w-[200%] md:w-[300%] w-full pl-10 pr-3 py-2 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="lg:w-[210%] md:w-[300%] w-full pl-10 pr-3 py-2 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Search here..."
                         />
                     </div>
 
-                    <div className='ml-2 lg:ml-36 md:ml-28'>
+                    <div className='ml-2 lg:ml-40 md:ml-28'>
                      <button className="btn btn-primary font-bold text-md">Search</button>
                     </div>
                 </div>

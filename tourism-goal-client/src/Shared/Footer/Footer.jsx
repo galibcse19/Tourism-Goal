@@ -29,12 +29,12 @@ const Footer = () => {
                 <div>
                     <p className='font-bold text-lg mb-4 lg:mt-0 md:mt-0 mt-4'>Links</p>
                     <div className='opacity-75'>
-                    <Link><p>Home</p></Link>
-                    <Link><p className='my-2'>Top News</p></Link>
-                    <Link><p>Destination to go</p></Link>
-                    <Link><p className='my-2'>Goals to do</p></Link>
-                    <Link><p>Books & Notes</p></Link>
-                    <Link><p className='my-2'>Tourism Association</p></Link>   
+                    <Link to={'/'}><p>Home</p></Link>
+                    <Link to={'/topNews'}><p className='my-2'>Top News</p></Link>
+                    <Link to={'/destinationToGo'}><p>Destination to go</p></Link>
+                    <Link to={'/goalsToDo'}><p className='my-2'>Goals to do</p></Link>
+                    <Link to={'/booksNotes'}><p>Books & Notes</p></Link>
+                    <Link to={'/'}><p className='my-2'>Tourism Association</p></Link>   
                     </div>
                 </div>
             </div>
